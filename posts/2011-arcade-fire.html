@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Suburbs — Arcade Fire | Grammy Chronicles</title>
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <style>
+    .article-hero-img {
+      position: relative;
+      min-height: 520px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      text-align: center;
+      overflow: hidden;
+      padding-bottom: 3rem;
+      padding-top: 80px;
+    }
+
+    .article-hero-img::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('https://happymag.tv/wp-content/uploads/2020/07/arcade-fire-car-1.jpg');
+      background-size: cover;
+      background-position: center;
+      filter: blur(3px) brightness(0.32) saturate(0.55);
+      transform: scale(1.06);
+      z-index: 0;
+    }
+
+    .article-hero-img::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(10,10,10,1) 0%,
+        rgba(10,10,10,0.78) 40%,
+        rgba(10,10,10,0.28) 75%,
+        rgba(10,10,10,0.08) 100%
+      );
+      z-index: 1;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 750px;
+      padding: 0 2rem;
+    }
+
+    .article-year-bg {
+      font-family: 'Playfair Display', serif;
+      font-size: 9rem;
+      font-weight: 900;
+      color: rgba(200,169,110,0.12);
+      margin-bottom: -2rem;
+    }
+
+    .article-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4.5vw, 3.5rem);
+      font-weight: 900;
+      font-style: italic;
+      color: #fff;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.8);
+    }
+
+    .article-artist {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      color: var(--accent);
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .article-meta {
+      font-size: 0.75rem;
+      color: rgba(232,228,220,0.55);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .grammy-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid rgba(200,169,110,0.35);
+      padding: 0.38rem 1rem;
+      border-radius: 100px;
+      margin-bottom: 1.2rem;
+    }
+
+    .album-showcase {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 2rem;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      padding: 1.8rem;
+      margin: 2.5rem 0;
+      border-radius: 4px;
+    }
+
+    .album-cover-frame img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 2px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+    }
+
+    .album-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.6rem;
+    }
+
+    .album-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      font-style: italic;
+      color: var(--accent2);
+    }
+
+    .info-row {
+      display: flex;
+      gap: 0.8rem;
+    }
+
+    .info-key {
+      font-size: 0.63rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      min-width: 72px;
+    }
+
+    .info-val {
+      font-size: 0.92rem;
+      color: var(--text);
+    }
+
+    .highlight-songs {
+      background: var(--bg3);
+      border-left: 3px solid var(--accent);
+      padding: 1.5rem 2rem;
+      border-radius: 0 6px 6px 0;
+      margin: 2rem 0;
+    }
+
+    .highlight-songs h4 {
+      color: var(--accent);
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .highlight-songs ul {
+      list-style: none;
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-logo">♪ Grammy Chronicles</a>
+  <ul class="nav-links">
+    <li><a href="../index.html#featured">Nổi bật</a></li>
+    <li><a href="../index.html#posts">Album</a></li>
+    <li><a href="../index.html#about">Về tôi</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="article-hero-img">
+  <div class="hero-inner">
+    <span class="grammy-badge">🏆 Grammy Album of the Year · 2011</span>
+    <div class="article-year-bg">2011</div>
+    <h1 class="article-title">"The Suburbs"</h1>
+    <p class="article-artist">Arcade Fire</p>
+    <p class="article-meta">Indie Rock · Electronic · Art Rock</p>
+  </div>
+</div>
+
+<div class="article-body">
+  <a href="../index.html#posts" class="back-link">← Quay lại danh sách</a>
+
+  <!-- Album Card -->
+  <div class="album-showcase">
+    <div class="album-cover-frame">
+      <img src="https://bizweb.dktcdn.net/100/411/628/products/ab67616d0000b273532391d63cfd6d32677f7af6-1.jpg?v=1668153481667"/>
+    </div>
+
+    <div class="album-info">
+      <div class="album-name">"The Suburbs"</div>
+
+      <div class="info-row">
+        <span class="info-key">Nghệ sĩ</span>
+        <span class="info-val">Arcade Fire</span>
+      </div>
+
+      <div class="info-row">
+        <span class="info-key">Phát hành</span>
+        <span class="info-val">Tháng 8, 2010</span>
+      </div>
+
+      <div class="info-row">
+        <span class="info-key">Thể loại</span>
+        <span class="info-val">Indie Rock · Electronic · Art Rock</span>
+      </div>
+
+      <div class="wins-tag">🏆 Grammy Album of the Year 2011</div>
+    </div>
+  </div>
+
+  <!-- Nội dung GIỮ NGUYÊN -->
+  <p>"The Suburbs" là album thứ ba của ban nhạc indie rock người Canada Arcade Fire, phát hành tháng 8 năm 2010 và giành giải Grammy Album của Năm năm 2011 — một chiến thắng gây sốc toàn bộ làng nhạc khi một ban nhạc indie rock độc lập đánh bại những tên tuổi lớn như Eminem, Katy Perry và Lady Gaga.</p>
+  <p>Album là một cuộc hành trình hoài niệm về tuổi thơ vùng ngoại ô — những con đường vắng, những buổi chiều hè lười biếng, những giấc mơ chưa thành và những mối tình đầu lạc lõng. Win Butler và Régine Chassagne đã xây dựng một thế giới âm thanh rộng lớn, đầy cảm xúc và ám ảnh.</p>
+  <p>Với 16 ca khúc trải dài qua nhiều thể loại — từ indie rock đến electronic, new wave và art rock — "The Suburbs" là một album đòi hỏi người nghe phải kiên nhẫn nhưng sẽ đền đáp xứng đáng.</p>
+
+  <!-- Highlight songs -->
+  <div class="highlight-songs">
+    <h4>Ca khúc nổi bật</h4>
+    <ul>
+      <li>The Suburbs</li>
+      <li>Ready to Start</li>
+      <li>Sprawl II (Mountains Beyond Mountains)</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-logo">♪ Grammy Chronicles</div>
+  <p>Website cá nhân của Nguyễn Trọng Phúc · Sư phạm Sinh học</p>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

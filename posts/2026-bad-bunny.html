@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DeBÍ TiRAR MáS FOToS — Bad Bunny | Grammy Chronicles</title>
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <style>
+    /* ── HERO CÓ ẢNH NỀN ── */
+    .article-hero-img {
+      position: relative;
+      min-height: 520px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      text-align: center;
+      overflow: hidden;
+      padding-bottom: 3rem;
+      padding-top: 80px;
+    }
+
+    .article-hero-img::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('https://www.billboard.com/wp-content/uploads/2024/12/Bad-Bunny-cr-Eric-Rojas-2024-uiyt-billboard-1548.jpg?w=942&h=628&crop=1');
+      background-size: cover;
+      background-position: center;
+      filter: blur(3px) brightness(0.32) saturate(0.55);
+      transform: scale(1.06);
+      z-index: 0;
+    }
+
+    .article-hero-img::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(10,10,10,1)    0%,
+        rgba(10,10,10,0.78) 40%,
+        rgba(10,10,10,0.28) 75%,
+        rgba(10,10,10,0.08) 100%
+      );
+      z-index: 1;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 750px;
+      padding: 0 2rem;
+    }
+
+    .article-year-bg {
+      font-family: 'Playfair Display', serif;
+      font-size: 9rem;
+      font-weight: 900;
+      color: rgba(200,169,110,0.12);
+      line-height: 1;
+      margin-bottom: -2rem;
+      user-select: none;
+    }
+
+    .article-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4.5vw, 3.5rem);
+      font-weight: 900;
+      font-style: italic;
+      position: relative;
+      z-index: 1;
+      margin-bottom: 0.4rem;
+      color: #fff;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.8);
+    }
+
+    .article-artist {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      color: var(--accent);
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .article-meta {
+      font-size: 0.75rem;
+      color: rgba(232,228,220,0.55);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .grammy-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid rgba(200,169,110,0.35);
+      padding: 0.38rem 1rem;
+      border-radius: 100px;
+      margin-bottom: 1.2rem;
+    }
+
+    /* ── ALBUM CARD ── */
+    .album-showcase {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 2rem;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      padding: 1.8rem;
+      margin: 2.5rem 0;
+      border-radius: 4px;
+    }
+
+    .album-cover-frame { position: relative; }
+
+    .album-cover-frame img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      display: block;
+      border-radius: 2px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+    }
+
+    .album-cover-frame::before {
+      content: '';
+      position: absolute;
+      top: 6px; left: 6px;
+      right: 6px; bottom: 6px;
+      border: 1px solid rgba(200,169,110,0.25);
+      border-radius: 2px;
+      pointer-events: none;
+    }
+
+    .album-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.6rem;
+    }
+
+    .album-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      font-style: italic;
+      color: var(--accent2);
+      line-height: 1.25;
+    }
+
+    .info-row {
+      display: flex;
+      gap: 0.8rem;
+      align-items: baseline;
+    }
+
+    .info-key {
+      font-size: 0.63rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      min-width: 72px;
+      flex-shrink: 0;
+    }
+
+    .info-val {
+      font-size: 0.92rem;
+      color: var(--text);
+    }
+
+    /* ── NỘI DUNG ── */
+    .article-body {
+      max-width: 720px;
+      margin: 0 auto 5rem;
+      padding: 0 2rem;
+    }
+
+    .article-body p {
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      font-size: 0.98rem;
+      line-height: 1.9;
+    }
+
+    .highlight-songs {
+      background: var(--bg3);
+      border-left: 3px solid var(--accent);
+      padding: 1.5rem 2rem;
+      border-radius: 0 6px 6px 0;
+      margin: 2rem 0;
+    }
+
+    .highlight-songs h4 {
+      color: var(--accent);
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .highlight-songs ul { list-style: none; }
+
+    .highlight-songs ul li {
+      color: var(--text);
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .highlight-songs ul li::before {
+      content: '♪';
+      color: var(--accent);
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-logo">♪ Grammy Chronicles</a>
+  <ul class="nav-links">
+    <li><a href="../index.html#featured">Nổi bật</a></li>
+    <li><a href="../index.html#posts">Album</a></li>
+    <li><a href="../index.html#about">Về tôi</a></li>
+  </ul>
+</nav>
+
+<div class="article-hero-img">
+  <div class="hero-inner">
+    <span class="grammy-badge">🏆 Grammy Album of the Year · 2026</span>
+    <div class="article-year-bg">2026</div>
+    <h1 class="article-title">"DeBÍ TiRAR MáS FOToS"</h1>
+    <p class="article-artist">Bad Bunny</p>
+    <p class="article-meta">Latin Trap · Reggaetón · Plena</p>
+  </div>
+</div>
+
+<div class="article-body">
+  <a href="../index.html#posts" class="back-link">← Quay lại danh sách</a>
+
+  <div class="album-showcase">
+    <div class="album-cover-frame">
+      <img src="https://bsmknighterrant.org/wp-content/uploads/2025/05/2YA8MI2DkwkqOlBCNwZ9ghwCeUWeoOCvaDxTBA1H.png"/>
+    </div>
+    <div class="album-info">
+      <div class="album-name">"DeBÍ TiRAR MáS FOToS"</div>
+      <div class="info-row"><span class="info-key">Nghệ sĩ</span><span class="info-val">Bad Bunny</span></div>
+      <div class="info-row"><span class="info-key">Phát hành</span><span class="info-val">2025</span></div>
+      <div class="info-row"><span class="info-key">Thể loại</span><span class="info-val">Latin Trap · Reggaetón · Plena</span></div>
+    </div>
+  </div>
+
+  <p>
+    "DeBÍ TiRAR MáS FOToS" là album thứ sáu của Bad Bunny, mang đậm màu sắc hoài niệm và là lời tri ân đến quê hương Puerto Rico.
+  </p>
+
+  <p>
+    Album đánh dấu bước chuyển mình khi anh kết hợp âm nhạc truyền thống Caribbean với trap và reggaetón hiện đại.
+  </p>
+
+  <p>
+    Chiến thắng Grammy 2026 giúp album trở thành tác phẩm tiếng Tây Ban Nha đầu tiên giành Album of the Year.
+  </p>
+
+  <div class="highlight-songs">
+    <h4>Ca khúc nổi bật</h4>
+    <ul>
+      <li>DtMF</li>
+      <li>Baile Inolvidable</li>
+      <li>VOU 787</li>
+    </ul>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">♪ Grammy Chronicles</div>
+  <p>Website cá nhân của Nguyễn Trọng Phúc · Sư phạm Sinh học</p>
+</footer>
+
+</body>
+</html>

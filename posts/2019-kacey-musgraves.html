@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Golden Hour — Kacey Musgraves | Grammy Chronicles</title>
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <style>
+    .article-hero-img {
+      position: relative;
+      min-height: 520px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      text-align: center;
+      overflow: hidden;
+      padding-bottom: 3rem;
+      padding-top: 80px;
+    }
+
+    .article-hero-img::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('https://thefader-res.cloudinary.com/private_images/w_1440,c_limit,f_auto,q_auto:best/HR_Kacey_Musgraves_180314000000010002_mz67vs/kacey-mugraves-golden-hour-interview.jpg');
+      background-size: cover;
+      background-position: center;
+      filter: blur(3px) brightness(0.32) saturate(0.55);
+      transform: scale(1.06);
+      z-index: 0;
+    }
+
+    .article-hero-img::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(10,10,10,1) 0%,
+        rgba(10,10,10,0.78) 40%,
+        rgba(10,10,10,0.28) 75%,
+        rgba(10,10,10,0.08) 100%
+      );
+      z-index: 1;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 750px;
+      padding: 0 2rem;
+    }
+
+    .article-year-bg {
+      font-family: 'Playfair Display', serif;
+      font-size: 9rem;
+      font-weight: 900;
+      color: rgba(200,169,110,0.12);
+      margin-bottom: -2rem;
+    }
+
+    .article-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4.5vw, 3.5rem);
+      font-weight: 900;
+      font-style: italic;
+      color: #fff;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.8);
+    }
+
+    .article-artist {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      color: var(--accent);
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .article-meta {
+      font-size: 0.75rem;
+      color: rgba(232,228,220,0.55);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .grammy-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid rgba(200,169,110,0.35);
+      padding: 0.38rem 1rem;
+      border-radius: 100px;
+      margin-bottom: 1.2rem;
+    }
+
+    .album-showcase {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 2rem;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      padding: 1.8rem;
+      margin: 2.5rem 0;
+      border-radius: 4px;
+    }
+
+    .album-cover-frame img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 2px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+    }
+
+    .album-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.6rem;
+    }
+
+    .album-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      font-style: italic;
+      color: var(--accent2);
+    }
+
+    .info-row {
+      display: flex;
+      gap: 0.8rem;
+    }
+
+    .info-key {
+      font-size: 0.63rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      min-width: 72px;
+    }
+
+    .info-val {
+      font-size: 0.92rem;
+      color: var(--text);
+    }
+
+    .highlight-songs {
+      background: var(--bg3);
+      border-left: 3px solid var(--accent);
+      padding: 1.5rem 2rem;
+      border-radius: 0 6px 6px 0;
+      margin: 2rem 0;
+    }
+
+    .highlight-songs h4 {
+      color: var(--accent);
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .highlight-songs ul {
+      list-style: none;
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-logo">♪ Grammy Chronicles</a>
+  <ul class="nav-links">
+    <li><a href="../index.html#featured">Nổi bật</a></li>
+    <li><a href="../index.html#posts">Album</a></li>
+    <li><a href="../index.html#about">Về tôi</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="article-hero-img">
+  <div class="hero-inner">
+    <span class="grammy-badge">🏆 Grammy Album of the Year · 2019</span>
+    <div class="article-year-bg">2019</div>
+    <h1 class="article-title">"Golden Hour"</h1>
+    <p class="article-artist">Kacey Musgraves</p>
+    <p class="article-meta">Country Pop · Dream Pop</p>
+  </div>
+</div>
+
+<div class="article-body">
+  <a href="../index.html#posts" class="back-link">← Quay lại danh sách</a>
+
+  <!-- Album Card -->
+  <div class="album-showcase">
+    <div class="album-cover-frame">
+      <img src="https://i.genius.com/5044d7f1dbd78e8ed152a41b944799bc012e39ee?url=https%3A%2F%2Fi.scdn.co%2Fimage%2F74001b62726f25b6086a6f3626ba6478917c5d20"/>
+    </div>
+
+    <div class="album-info">
+      <div class="album-name">"Golden Hour"</div>
+
+      <div class="info-row">
+        <span class="info-key">Nghệ sĩ</span>
+        <span class="info-val">Kacey Musgraves</span>
+      </div>
+
+      <div class="info-row">
+        <span class="info-key">Phát hành</span>
+        <span class="info-val">Tháng 3, 2018</span>
+      </div>
+
+      <div class="info-row">
+        <span class="info-key">Thể loại</span>
+        <span class="info-val">Country Pop · Dream Pop</span>
+      </div>
+
+      <div class="wins-tag">🏆 Grammy Album of the Year 2019</div>
+    </div>
+  </div>
+
+  <!-- Nội dung GIỮ NGUYÊN -->
+  <p>"Golden Hour" là album thứ tư của Kacey Musgraves, phát hành tháng 3 năm 2018, và là một trong những chiến thắng được lòng giới phê bình nhất trong lịch sử Grammy gần đây. Album đã giành bốn giải tại Grammy 2019, bao gồm Album của Năm.</p>
+  <p>Đây là một album tình yêu thuần khiết — được viết trong giai đoạn Kacey Musgraves mới kết hôn với nhạc sĩ Ruston Kelly. "Golden Hour" mang đến cảm giác của buổi chiều tà chan hòa ánh nắng vàng, với những ca từ dịu dàng và âm nhạc kết hợp tinh tế giữa country, synth-pop và disco.</p>
+  <p>Điều đặc biệt ở album này là cách Kacey Musgraves phá vỡ giới hạn của nhạc country truyền thống mà không đánh mất bản sắc của mình. Đây được xem là album country hay nhất thập niên 2010.</p>
+
+  <!-- Highlight songs -->
+  <div class="highlight-songs">
+    <h4>Ca khúc nổi bật</h4>
+    <ul>
+      <li>Butterflies</li>
+      <li>Rainbow</li>
+      <li>Happy & Sad</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-logo">♪ Grammy Chronicles</div>
+  <p>Website cá nhân của Nguyễn Trọng Phúc · Sư phạm Sinh học</p>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

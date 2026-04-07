@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>We Are — Jon Batiste | Grammy Chronicles</title>
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <style>
+    /* HERO IMAGE */
+    .article-hero-img {
+      position: relative;
+      min-height: 520px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      text-align: center;
+      overflow: hidden;
+      padding-bottom: 3rem;
+      padding-top: 80px;
+    }
+
+    .article-hero-img::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('https://ca-times.brightspotcdn.com/dims4/default/480edb2/2147483647/strip/true/crop/1500x1000+0+0/resize/1200x800!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F15%2Fa7%2F15b010e147eb82ab42bbef0ff9c1%2F11368666-env-jon-batiste-photo-118.jpg');
+      background-size: cover;
+      background-position: center;
+      filter: blur(3px) brightness(0.32) saturate(0.6);
+      transform: scale(1.06);
+      z-index: 0;
+    }
+
+    .article-hero-img::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(10,10,10,1) 0%,
+        rgba(10,10,10,0.7) 50%,
+        rgba(10,10,10,0.1) 100%
+      );
+      z-index: 1;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 750px;
+      padding: 0 2rem;
+    }
+
+    .article-year-bg {
+      font-family: 'Playfair Display', serif;
+      font-size: 9rem;
+      font-weight: 900;
+      color: rgba(200,169,110,0.12);
+      margin-bottom: -2rem;
+    }
+
+    .article-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4.5vw, 3.5rem);
+      font-weight: 900;
+      font-style: italic;
+      color: #fff;
+    }
+
+    .article-artist {
+      font-family: 'Playfair Display', serif;
+      color: var(--accent);
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .grammy-badge {
+      display: inline-flex;
+      padding: 0.4rem 1rem;
+      border: 1px solid rgba(200,169,110,0.35);
+      color: var(--accent);
+      border-radius: 100px;
+      margin-bottom: 1rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    /* ALBUM CARD */
+    .album-showcase {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 2rem;
+      background: var(--bg3);
+      border-left: 3px solid var(--accent);
+      padding: 1.8rem;
+      margin: 2rem 0;
+    }
+
+    .album-showcase img {
+      width: 100%;
+      border-radius: 4px;
+    }
+
+    .album-name {
+      font-size: 1.2rem;
+      font-style: italic;
+      color: var(--accent2);
+    }
+
+    .info-row {
+      display: flex;
+      gap: 0.6rem;
+    }
+
+    .info-key {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      min-width: 80px;
+    }
+
+    /* CONTENT */
+    .article-body {
+      max-width: 720px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    .highlight-songs {
+      background: var(--bg3);
+      border-left: 3px solid var(--accent);
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      .album-showcase {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-logo">♪ Grammy Chronicles</a>
+  <ul class="nav-links">
+    <li><a href="../index.html#featured">Nổi bật</a></li>
+    <li><a href="../index.html#posts">Album</a></li>
+    <li><a href="../index.html#about">Về tôi</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="article-hero-img">
+  <div class="hero-inner">
+    <span class="grammy-badge">🏆 Grammy Album of the Year · 2022</span>
+    <div class="article-year-bg">2022</div>
+    <h1 class="article-title">"We Are"</h1>
+    <p class="article-artist">Jon Batiste</p>
+    <p class="article-meta">R&B · Soul · Jazz · Gospel</p>
+  </div>
+</div>
+
+<!-- BODY -->
+<div class="article-body">
+  <a href="../index.html#posts" class="back-link">← Quay lại danh sách</a>
+
+  <!-- Album card -->
+  <div class="album-showcase">
+    <img src="https://m.media-amazon.com/images/I/61T0yZN03IL._UF1000,1000_QL80_.jpg"/>
+    <div>
+      <div class="album-name">"We Are"</div>
+      <div class="info-row"><span class="info-key">Nghệ sĩ</span> Jon Batiste</div>
+      <div class="info-row"><span class="info-key">Phát hành</span> 19 tháng 3, 2021</div>
+      <div class="info-row"><span class="info-key">Thể loại</span> R&B · Soul · Jazz · Gospel</div>
+      <div class="info-row"><span class="info-key">Giải thưởng</span> 5 Grammy Awards</div>
+    </div>
+  </div>
+
+  <p>
+    "We Are" là album thứ sáu của nghệ sĩ đa tài Jon Batiste, phát hành năm 2021. Tại Grammy 2022, album này tạo ra một cú sốc lớn khi đánh bại nhiều đối thủ nặng ký.
+  </p>
+
+  <p>
+    Album là một bức tranh âm nhạc đa sắc màu, phản ánh bản sắc văn hóa Louisiana phong phú. Jon Batiste pha trộn R&B, soul, jazz, gospel và pop một cách mượt mà.
+  </p>
+
+  <p>
+    Được thực hiện trong thời kỳ đại dịch COVID-19, "We Are" mang thông điệp về hy vọng, đoàn kết và sức mạnh của âm nhạc. Jon Batiste đã giành tổng cộng 5 giải Grammy.
+  </p>
+
+  <div class="highlight-songs">
+    <h4>Ca khúc nổi bật</h4>
+    <ul>
+      <li>Freedom</li>
+      <li>I Need You</li>
+      <li>Tell the Truth</li>
+    </ul>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">♪ Grammy Chronicles</div>
+  <p>Website cá nhân của Nguyễn Trọng Phúc · Sư phạm Sinh học</p>
+</footer>
+
+</body>
+</html>

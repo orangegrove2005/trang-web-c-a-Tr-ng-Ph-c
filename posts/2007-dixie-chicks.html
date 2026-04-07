@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Taking the Long Way — Dixie Chicks | Grammy Chronicles</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    /* ── HERO CÓ ẢNH NỀN ── */
+    .article-hero-img {
+      position: relative;
+      min-height: 520px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      text-align: center;
+      overflow: hidden;
+      padding-bottom: 3rem;
+      padding-top: 80px;
+    }
+ 
+    /* Ảnh nền từ Wikipedia - bìa album */
+    .article-hero-img::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('https://bizweb.dktcdn.net/100/411/628/products/81iycjocl7l-sl1500.jpg?v=1612251562990');
+      background-size: cover;
+      background-position: center top;
+      filter: blur(3px) brightness(0.35) saturate(0.6);
+      transform: scale(1.06);
+      z-index: 0;
+    }
+ 
+    /* Gradient từ dưới lên — bảo vệ chữ, không bao giờ bị mờ */
+    .article-hero-img::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(10,10,10,1)    0%,
+        rgba(10,10,10,0.75) 40%,
+        rgba(10,10,10,0.3)  75%,
+        rgba(10,10,10,0.1)  100%
+      );
+      z-index: 1;
+    }
+ 
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 750px;
+      padding: 0 2rem;
+    }
+ 
+    .article-year-bg {
+      font-family: 'Playfair Display', serif;
+      font-size: 9rem;
+      font-weight: 900;
+      color: rgba(200,169,110,0.12);
+      line-height: 1;
+      margin-bottom: -2rem;
+      user-select: none;
+    }
+ 
+    .article-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.8rem);
+      font-weight: 900;
+      font-style: italic;
+      position: relative;
+      z-index: 1;
+      margin-bottom: 0.4rem;
+      color: #fff;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.8);
+    }
+ 
+    .article-artist {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      color: var(--accent);
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+ 
+    .article-meta {
+      font-size: 0.75rem;
+      color: rgba(232,228,220,0.55);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+ 
+    /* ── BADGE GRAMMY ── */
+    .grammy-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid rgba(200,169,110,0.35);
+      padding: 0.38rem 1rem;
+      border-radius: 100px;
+      margin-bottom: 1.2rem;
+    }
+ 
+    /* ── ALBUM CARD NỔI BẬT ── */
+    .album-showcase {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 2rem;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      padding: 1.8rem;
+      margin: 2.5rem 0;
+      border-radius: 4px;
+    }
+ 
+    .album-cover-frame {
+      position: relative;
+    }
+ 
+    .album-cover-frame img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      display: block;
+      border-radius: 2px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+    }
+ 
+    /* Viền trang trí góc ảnh */
+    .album-cover-frame::before {
+      content: '';
+      position: absolute;
+      top: -px; left: -px;
+      right: px; bottom: px;
+      border: 1px solid rgba(200,169,110,0.25);
+      border-radius: 2px;
+      pointer-events: none;
+    }
+ 
+    .album-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.6rem;
+    }
+ 
+    .album-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      font-style: italic;
+      color: var(--accent2);
+      line-height: 1.25;
+    }
+ 
+    .info-row {
+      display: flex;
+      gap: 0.8rem;
+      align-items: baseline;
+    }
+ 
+    .info-key {
+      font-size: 0.63rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      min-width: 72px;
+      flex-shrink: 0;
+    }
+ 
+    .info-val {
+      font-size: 0.92rem;
+      color: var(--text);
+    }
+ 
+    .wins-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(200,169,110,0.1);
+      border: 1px solid rgba(200,169,110,0.3);
+      color: var(--accent);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.75rem;
+      border-radius: 2px;
+      margin-top: 0.4rem;
+      width: fit-content;
+    }
+ 
+    /* ── NỘI DUNG BÀI VIẾT ── */
+    .article-body {
+      max-width: 720px;
+      margin: 0 auto 5rem;
+      padding: 0 2rem;
+    }
+ 
+    .article-body p {
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      font-size: 0.98rem;
+      line-height: 1.9;
+    }
+ 
+    /* Chữ cái đầu lớn */
+    .drop-cap::first-letter {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.8rem;
+      font-weight: 900;
+      color: var(--accent);
+      float: left;
+      line-height: 0.85;
+      margin: 0.08em 0.1em 0 0;
+    }
+ 
+    /* Pull quote */
+    .pull-quote {
+      border-left: 3px solid var(--accent);
+      background: var(--bg3);
+      padding: 1.2rem 1.8rem;
+      margin: 2rem 0;
+      border-radius: 0 4px 4px 0;
+    }
+ 
+    .pull-quote p {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.18rem;
+      font-style: italic;
+      color: var(--text) !important;
+      margin: 0 !important;
+      line-height: 1.6;
+    }
+ 
+    /* ── CA KHÚC NỔI BẬT (giữ style cũ + cải thiện) ── */
+    .highlight-songs {
+      background: var(--bg3);
+      border-left: 3px solid var(--accent);
+      padding: 1.5rem 2rem;
+      border-radius: 0 6px 6px 0;
+      margin: 2rem 0;
+    }
+ 
+    .highlight-songs h4 {
+      color: var(--accent);
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+ 
+    .highlight-songs ul { list-style: none; }
+ 
+    .highlight-songs ul li {
+      color: var(--text);
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+ 
+    .highlight-songs ul li:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+ 
+    .highlight-songs ul li::before {
+      content: '♪';
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+ 
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      .album-showcase {
+        grid-template-columns: 1fr;
+      }
+      .album-cover-frame img {
+        max-width: 180px;
+      }
+      .article-year-bg {
+        font-size: 5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+ 
+<!-- NAVBAR (giữ nguyên) -->
+<nav>
+  <a href="../index.html" class="nav-logo">♪ Grammy Chronicles</a>
+  <ul class="nav-links">
+    <li><a href="../index.html#featured">Nổi bật</a></li>
+    <li><a href="../index.html#posts">Album</a></li>
+    <li><a href="../index.html#about">Về tôi</a></li>
+  </ul>
+</nav>
+ 
+<!-- HERO CÓ ẢNH NỀN -->
+<div class="article-hero-img">
+  <div class="hero-inner">
+    <span class="grammy-badge">🏆 Grammy Album of the Year · 2007</span>
+    <div class="article-year-bg">2007</div>
+    <h1 class="article-title">"Taking the Long Way"</h1>
+    <p class="article-artist">Dixie Chicks</p>
+    <p class="article-meta">Country · Country Rock · Columbia Nashville</p>
+  </div>
+</div>
+ 
+<!-- NỘI DUNG BÀI VIẾT -->
+<div class="article-body">
+  <a href="../index.html#posts" class="back-link">← Quay lại danh sách</a>
+ 
+  <!-- Card thông tin album + ảnh bìa rõ nét -->
+  <div class="album-showcase">
+    <div class="album-cover-frame">
+      <img
+        src="https://bizweb.dktcdn.net/100/411/628/products/81iycjocl7l-sl1500.jpg?v=1612251562990"
+        alt="Taking the Long Way – Dixie Chicks album cover"
+      />
+    </div>
+    <div class="album-info">
+      <div class="album-name">"Taking the Long Way"</div>
+      <div class="info-row">
+        <span class="info-key">Nghệ sĩ</span>
+        <span class="info-val">Dixie Chicks</span>
+      </div>
+      <div class="info-row">
+        <span class="info-key">Phát hành</span>
+        <span class="info-val">23 tháng 5, 2006</span>
+      </div>
+      <div class="info-row">
+        <span class="info-key">Thể loại</span>
+        <span class="info-val">Country · Country Rock</span>
+      </div>
+      <div class="info-row">
+        <span class="info-key">Hãng đĩa</span>
+        <span class="info-val">Columbia Nashville</span>
+      </div>
+      <div class="info-row">
+        <span class="info-key">Sản xuất</span>
+        <span class="info-val">Rick Rubin</span>
+      </div>
+      <div class="wins-tag">🏆 5 giải Grammy — Album · Record · Song of the Year &amp; hơn nữa</div>
+    </div>
+  </div>
+ 
+  <!-- Bài viết -->
+  <p class="drop-cap">
+    <em>"Taking the Long Way"</em> là album thứ năm của Dixie Chicks, phát hành tháng 5 năm 2006 và giành giải Grammy Album của Năm năm 2007 cùng bốn giải khác trong đêm trao giải lịch sử. Không chỉ đơn thuần là một chiến thắng âm nhạc, đây là cột mốc văn hóa đặc biệt.
+  </p>
+ 
+  <div class="pull-quote">
+    <p>"Chiến thắng Grammy của album là chiến thắng của tự do ngôn luận và sự dũng cảm nghệ thuật."</p>
+  </div>
+ 
+  <p>
+    Album ra đời trong bối cảnh nhóm nhạc đang bị tẩy chay và cấm sóng khắp nước Mỹ vì những phát biểu chỉ trích chiến tranh Iraq của ca sĩ Natalie Maines năm 2003. Thay vì im lặng và cúi đầu xin lỗi, Dixie Chicks đã đáp lại bằng một album đầy bản lĩnh — được sản xuất bởi huyền thoại Rick Rubin và mang âm thanh trưởng thành, sắc bén hơn bao giờ hết.
+  </p>
+ 
+  <p>
+    <em>"Taking the Long Way"</em> là tuyên ngôn của những người phụ nữ dám nói lên sự thật và chịu đựng hậu quả. Ca khúc đại diện <strong style="color:var(--accent)">Not Ready to Make Nice</strong> — thẳng thắn, không hối hận, không khoan nhượng — đã trở thành bài thánh ca của những ai từng bị dập tắt vì lên tiếng. Đêm Grammy 2007, khi album chiến thắng cả năm hạng mục lớn nhất, khán phòng Staples Center đứng dậy vỗ tay như một lời xác nhận: âm nhạc và sự thật bao giờ cũng thắng.
+  </p>
+ 
+  <!-- Ca khúc nổi bật -->
+  <div class="highlight-songs">
+    <h4>Ca khúc nổi bật</h4>
+    <ul>
+      <li>Not Ready to Make Nice</li>
+      <li>The Long Way Around</li>
+      <li>Lubbock or Leave It</li>
+      <li>Lullaby</li>
+      <li>Easy Silence</li>
+    </ul>
+  </div>
+</div>
+ 
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">♪ Grammy Chronicles</div>
+  <p>Website cá nhân của Nguyễn Trọng Phúc · Sư phạm Sinh học</p>
+</footer>
+ 
+<script src="../js/main.js"></script>
+</body>
+</html>

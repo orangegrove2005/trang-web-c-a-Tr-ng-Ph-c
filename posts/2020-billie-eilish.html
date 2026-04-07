@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>When We All Fall Asleep, Where Do We Go? — Billie Eilish | Grammy Chronicles</title>
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <style>
+    .article-hero-img {
+      position: relative;
+      min-height: 520px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      text-align: center;
+      overflow: hidden;
+      padding-bottom: 3rem;
+      padding-top: 80px;
+    }
+
+    .article-hero-img::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('https://i.ytimg.com/vi/SjOIq3T9yS0/maxresdefault.jpg');
+      background-size: cover;
+      background-position: center;
+      filter: blur(3px) brightness(0.32) saturate(0.55);
+      transform: scale(1.06);
+      z-index: 0;
+    }
+
+    .article-hero-img::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(10,10,10,1) 0%,
+        rgba(10,10,10,0.78) 40%,
+        rgba(10,10,10,0.28) 75%,
+        rgba(10,10,10,0.08) 100%
+      );
+      z-index: 1;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 750px;
+      padding: 0 2rem;
+    }
+
+    .article-year-bg {
+      font-family: 'Playfair Display', serif;
+      font-size: 9rem;
+      font-weight: 900;
+      color: rgba(200,169,110,0.12);
+      margin-bottom: -2rem;
+    }
+
+    .article-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4.5vw, 3.5rem);
+      font-weight: 900;
+      font-style: italic;
+      color: #fff;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.8);
+    }
+
+    .article-artist {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      color: var(--accent);
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .article-meta {
+      font-size: 0.75rem;
+      color: rgba(232,228,220,0.55);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .grammy-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid rgba(200,169,110,0.35);
+      padding: 0.38rem 1rem;
+      border-radius: 100px;
+      margin-bottom: 1.2rem;
+    }
+
+    .album-showcase {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 2rem;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      padding: 1.8rem;
+      margin: 2.5rem 0;
+      border-radius: 4px;
+    }
+
+    .album-cover-frame img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 2px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+    }
+
+    .album-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.6rem;
+    }
+
+    .album-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      font-style: italic;
+      color: var(--accent2);
+    }
+
+    .info-row {
+      display: flex;
+      gap: 0.8rem;
+    }
+
+    .info-key {
+      font-size: 0.63rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      min-width: 72px;
+    }
+
+    .info-val {
+      font-size: 0.92rem;
+      color: var(--text);
+    }
+
+    .highlight-songs {
+      background: var(--bg3);
+      border-left: 3px solid var(--accent);
+      padding: 1.5rem 2rem;
+      border-radius: 0 6px 6px 0;
+      margin: 2rem 0;
+    }
+
+    .highlight-songs h4 {
+      color: var(--accent);
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .highlight-songs ul {
+      list-style: none;
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-logo">♪ Grammy Chronicles</a>
+  <ul class="nav-links">
+    <li><a href="../index.html#featured">Nổi bật</a></li>
+    <li><a href="../index.html#posts">Album</a></li>
+    <li><a href="../index.html#about">Về tôi</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="article-hero-img">
+  <div class="hero-inner">
+    <span class="grammy-badge">🏆 Grammy Album of the Year · 2020</span>
+    <div class="article-year-bg">2020</div>
+    <h1 class="article-title">"When We All Fall Asleep, Where Do We Go?"</h1>
+    <p class="article-artist">Billie Eilish</p>
+    <p class="article-meta">Dark Pop · Electropop</p>
+  </div>
+</div>
+
+<div class="article-body">
+  <a href="../index.html#posts" class="back-link">← Quay lại danh sách</a>
+
+  <!-- Album Card -->
+  <div class="album-showcase">
+    <div class="album-cover-frame">
+      <img src="https://store.billieeilish.com/cdn/shop/files/IMG_1711_1.jpg?v=1742500604&width=900"/>
+    </div>
+
+    <div class="album-info">
+      <div class="album-name">"When We All Fall Asleep, Where Do We Go?"</div>
+
+      <div class="info-row">
+        <span class="info-key">Nghệ sĩ</span>
+        <span class="info-val">Billie Eilish</span>
+      </div>
+
+      <div class="info-row">
+        <span class="info-key">Phát hành</span>
+        <span class="info-val">Tháng 3, 2019</span>
+      </div>
+
+      <div class="info-row">
+        <span class="info-key">Thể loại</span>
+        <span class="info-val">Dark Pop · Electropop</span>
+      </div>
+
+      <div class="wins-tag">🏆 Grammy Album of the Year 2020</div>
+    </div>
+  </div>
+
+  <!-- Nội dung GIỮ NGUYÊN -->
+  <p>"When We All Fall Asleep, Where Do We Go?" là album debut của Billie Eilish, phát hành tháng 3 năm 2019 khi cô mới 17 tuổi. Album đã làm chấn động làng nhạc thế giới và mang về cho Billie Eilish chiến thắng ở cả bốn hạng mục chính của Grammy 2020: Album, Record, Song của Năm và Nghệ sĩ Mới xuất sắc nhất.</p>
+  <p>Album được sản xuất hoàn toàn bởi anh trai Finneas O'Connell trong phòng ngủ nhỏ của gia đình tại Los Angeles. Đây chính là điều làm nên vẻ độc đáo của nó: âm thanh gần gũi, thì thầm, đôi khi rùng rợn, nhưng luôn chân thực và không che giấu cảm xúc.</p>
+  <p>"When We All Fall Asleep..." là tuyên ngôn của một thế hệ trẻ nổi loạn với những tiêu chuẩn thẩm mỹ và âm nhạc truyền thống. Billie Eilish đã thay đổi cách người ta nghĩ về pop music.</p>
+
+  <!-- Highlight songs -->
+  <div class="highlight-songs">
+    <h4>Ca khúc nổi bật</h4>
+    <ul>
+      <li>bad guy</li>
+      <li>when the party's over</li>
+      <li>bury a friend</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-logo">♪ Grammy Chronicles</div>
+  <p>Website cá nhân của Nguyễn Trọng Phúc · Sư phạm Sinh học</p>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
